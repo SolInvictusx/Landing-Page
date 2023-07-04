@@ -1,6 +1,6 @@
 import React from 'react'
 
-
+// import global styles
 import {
     PaddingContainer,
     FlexContainer,
@@ -10,6 +10,9 @@ import {
     IconContainer,
 } from '../styles/Global.styled';
 
+// import showcase styles
+import { ShowcaseImageCard, ShowcaseParticleContainer } from '../styles/Showcase.styled';
+// import react icons
 import { BsLinkedin, BsGithub } from 'react-icons/bs';
 
 const Showcase = () => {
@@ -36,15 +39,15 @@ const Showcase = () => {
                     </Heading>
 
                     <Heading as='h3' size='h3'>
-                        I'm a <BlueText>FrontEnd Developer</BlueText>
+                        I'm a <BlueText>Full Stack Developer</BlueText>
                     </Heading>
 
-                    <ParaText>
-                        Hello, my name is Ryan Mebruer and I'm a front-end developer based out of New Jersey. I have experience building user-friendly websites and web applications.
+                    <ParaText as='p' top='2rem' bottom='4rem'>
+                        Hello, my name is Ryan Mebruer and I'm a Full-Stack developer based out of New Jersey. I have experience building user-friendly websites and web applications.
                     </ParaText>
 
                     {/* social-icons */}
-                    <FlexContainer>
+                    <FlexContainer gap='20px'>
                         <IconContainer color='white' size='1.5rem'>
                             <BsLinkedin />
                         </IconContainer>
@@ -55,6 +58,15 @@ const Showcase = () => {
 
                     </FlexContainer>
                 </div>
+
+                {/* --right-content-- */}
+                <FlexContainer>
+                    <ShowcaseParticleContainer>
+                        <ShowcaseImageCard>
+
+                        </ShowcaseImageCard>
+                    </ShowcaseParticleContainer>
+                </FlexContainer>
             </FlexContainer>
         </PaddingContainer>
     )
