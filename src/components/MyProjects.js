@@ -26,8 +26,8 @@ const MyProjects = () => {
             </Heading>
 
             {projectDetails.map((project) => (
-                <PaddingContainer top='5rem' bottom='5rem'>
-                    <Project />
+                <PaddingContainer key={project.id} top='5rem' bottom='5rem'>
+                    <Project data={project} />
                 </PaddingContainer>
 
             ))}

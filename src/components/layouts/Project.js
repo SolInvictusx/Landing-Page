@@ -13,12 +13,15 @@ import {
 // import project styles
 import {
     TechStackCard,
+    ProjectImage,
+    ProjectImageContainer,
 } from '../../styles/MyProject.styled';
 
 // import assets
 import { FaGithub } from 'react-icons/fa';
+import Project1 from '../../assets/Project1.png';
 
-const Project = () => {
+const Project = ({ data }) => {
     return (
         <FlexContainer fullWidthChild>
 
@@ -26,7 +29,7 @@ const Project = () => {
             <div>
                 <FlexContainer align='center' gap='1rem'>
                     <Heading as='h3' size='h3' bottom='1rem'>
-                        Project Name
+                        {data.project_name}
                     </Heading>
 
                     <IconContainer color='blue' size='2rem'>
@@ -36,13 +39,14 @@ const Project = () => {
 
                 <PaddingContainer top='1rem'>
                     <FlexContainer gap='1.5rem'>
-                        <TechStackCard>Technology</TechStackCard>
-                        <TechStackCard>Technology</TechStackCard>
+                        {data.tech_stack.map((stack) => (
+                            <TechStackCard>{stack}</TechStackCard>
+                        ))}
                     </FlexContainer>
                 </PaddingContainer>
 
                 <ParaText top='1.5rem' bottom='2rem'>
-                    Project Description
+                    {data.projec_desc}
                 </ParaText>
 
                 <Button>
@@ -51,9 +55,10 @@ const Project = () => {
 
             </div>
 
-            <div>
-
-            </div>
+            {/* --right-section-- */}
+            <ProjectImageContainer justify='flex-end'>
+                <ProjectImage src={data.project_img} alt={data.project_name} />
+            </ProjectImageContainer>
         </FlexContainer>
     )
 }
