@@ -11,9 +11,19 @@ import {
 } from '../styles/Global.styled';
 
 // import showcase styles
-import { ShowcaseImageCard, ShowcaseParticleContainer } from '../styles/Showcase.styled';
+import {
+    ShowcaseImageCard,
+    ShowcaseParticleContainer,
+    Particle,
+} from '../styles/Showcase.styled';
+
 // import react icons
 import { BsLinkedin, BsGithub } from 'react-icons/bs';
+import { GrMail } from 'react-icons/gr';
+
+// import asset
+import ShowcaseImg from '../assets/showcase-img.png'
+import BackgroundImg from '../assets/particle.png';
 
 const Showcase = () => {
     return (
@@ -30,8 +40,8 @@ const Showcase = () => {
                     <Heading as='h4' size='h4'>Hello!</Heading>
 
                     <Heading
-                        as='h1'
-                        size='h1'
+                        as='h2'
+                        size='h2'
                         top='0.5rem'
                         bottom='1rem'
                     >
@@ -56,15 +66,43 @@ const Showcase = () => {
                             <BsGithub />
                         </IconContainer>
 
+                        <IconContainer color='white' size='1.5rem'>
+                            <GrMail />
+                        </IconContainer>
+
                     </FlexContainer>
                 </div>
 
                 {/* --right-content-- */}
-                <FlexContainer>
+                <FlexContainer justify='flex-end'>
                     <ShowcaseParticleContainer>
                         <ShowcaseImageCard>
-
+                            <img src={ShowcaseImg} alt='showcase' />
                         </ShowcaseImageCard>
+
+                        <Particle
+                            src={BackgroundImg}
+                            alt='particle'
+                            top='-80px'
+                            left='20px'
+                            rotate='60deg'
+                        />
+
+                        <Particle
+                            src={BackgroundImg}
+                            alt='particle'
+                            top='50px'
+                            right='-70px'
+                            rotate='0deg'
+                        />
+
+                        <Particle
+                            src={BackgroundImg}
+                            alt='particle'
+                            bottom='10px'
+                            left='-70px'
+                            rotate='50deg'
+                        />
                     </ShowcaseParticleContainer>
                 </FlexContainer>
             </FlexContainer>

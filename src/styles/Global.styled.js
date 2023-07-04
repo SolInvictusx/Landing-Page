@@ -53,11 +53,11 @@ font-size: ${({ size }) => {
 `
 
 export const BlueText = styled.span`
-color ${({ theme }) => theme.colors.secondary};
+color: ${({ theme }) => theme.colors.secondary};
 `
 
 export const ParaText = styled(PaddingContainer)`
-color${({ theme }) => theme.colors.para_text_color};
+color: ${({ theme }) => theme.colors.para_text_color};
 line-height: 2rem;
 `
 
