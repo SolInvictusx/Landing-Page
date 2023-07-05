@@ -14,6 +14,7 @@ import {
 } from '../../styles/Navbar.styled';
 
 import { AiOutlineClose } from 'react-icons/ai';
+import { navLinks } from '../../utils/Data';
 
 const NavMenu = ({ setOpenMenu }) => {
     return (
@@ -24,7 +25,7 @@ const NavMenu = ({ setOpenMenu }) => {
                 right='5%'
                 top='2rem'
             >
-                <FlexContainer justify='flex-end'>
+                <FlexContainer justify='flex-end' responsiveFlex>
                     <MenuIcon
                         onClick={() => setOpenMenu(false)}
                     >
@@ -38,34 +39,17 @@ const NavMenu = ({ setOpenMenu }) => {
                 <FlexContainer
                     direction='column'
                     align='center'
+                    responsiveFlex
                 >
-                    <MenuItem
-                        href='#Home'
-                        onClick={() => setOpenMenu(false)}
-                    >
-                        Who I Am
-                    </MenuItem>
-
-                    <MenuItem
-                        href='#Skills'
-                        onClick={() => setOpenMenu(false)}
-                    >
-                        My Skills
-                    </MenuItem>
-
-                    <MenuItem
-                        href='#Projects'
-                        onClick={() => setOpenMenu(false)}
-                    >
-                        My Projects
-                    </MenuItem>
-
-                    <MenuItem
-                        href='#Contact'
-                        onClick={() => setOpenMenu(false)}
-                    >
-                        My Contact
-                    </MenuItem>
+                    {navLinks.map((link) => (
+                        <MenuItem
+                            key={link.id}
+                            href={`#${link.href}`}
+                            onClick={() => setOpenMenu(false)}
+                        >
+                            {link.name}
+                        </MenuItem>
+                    ))}
                 </FlexContainer>
             </PaddingContainer>
         </NavMenuContainer >

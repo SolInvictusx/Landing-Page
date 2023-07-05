@@ -24,8 +24,14 @@ const MySkills = () => {
             id='Skills'
             top='10'
             bottom='10%'
+            responsiveLeft='1rem'
+            responsiveRight='1rem'
         >
-            <FlexContainer fullWidthChild>
+            <FlexContainer
+                responsiveFlex
+                responsiveDirection='column-reverse'
+                fullWidthChild
+            >
 
                 {/* --left-section-- */}
                 <SkillsCardContainer>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 // import global styles
 import {
@@ -25,6 +26,8 @@ import { GrMail } from 'react-icons/gr';
 import ShowcaseImg from '../assets/showcase-img.png'
 import BackgroundImg from '../assets/particle.png';
 
+import { fadeInLeftVariant } from '../utils/Variants';
+
 const Showcase = () => {
     return (
         <PaddingContainer
@@ -33,10 +36,17 @@ const Showcase = () => {
             right='10%'
             top='15%'
             bottom='10%'
+            responsiveLeft='1rem'
+            responsiveRight='1rem'
+            responsiveTop='8rem'
         >
             <FlexContainer align='center' fullWidthChild>
                 {/* --left-content-- */}
-                <div>
+                <motion.div
+                    variants={fadeInLeftVariant}
+                    initial='hidden'
+                    whileInView='visible'
+                >
                     <Heading as='h4' size='h4'>Hello!</Heading>
 
                     <Heading
@@ -57,7 +67,7 @@ const Showcase = () => {
                     </ParaText>
 
                     {/* social-icons */}
-                    <FlexContainer gap='20px'>
+                    <FlexContainer gap='20px' responsiveFlex>
                         <IconContainer color='white' size='1.5rem'>
                             <BsLinkedin />
                         </IconContainer>
@@ -71,7 +81,7 @@ const Showcase = () => {
                         </IconContainer>
 
                     </FlexContainer>
-                </div>
+                </motion.div>
 
                 {/* --right-content-- */}
                 <FlexContainer justify='flex-end'>
