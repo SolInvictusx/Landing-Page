@@ -31,8 +31,8 @@ export const Skills = [
 export const projectDetails = [
     {
         id: 0,
-        project_name: "Campground App",
-        project_desc: "A travel applicaton that allows the user to book campsites, loot at reviews of those campsites, and plan out vacations",
+        project_name: "Campground Travel Guide",
+        project_desc: "A travel applicaton that allows the user to inspect campsites, look at reviews, and book spots!",
         tech_stack: ['React JS', "Bootstrap", "Redux JS"],
         project_img: Project1,
         project_url: 'https://www.google.com',
@@ -40,11 +40,15 @@ export const projectDetails = [
     },
     {
         id: 1,
-        project_name: "Local Meat Distributor App",
-        project_desc: "This application has features such as viewing different products, adding those products to a reserve list, contact information, as well other capabilities",
+        project_name: "Local Meat Distributor",
+        project_desc: "This e-commerce site allows the user to get to know more about a local farm, check out different proportions of products, and add those products to a cart for check out!",
         tech_stack: ['Javascript', "Bootstrap", "HTML"],
         project_img: Project2,
         project_url: 'https://www.google.com',
         reverse: false,
     },
+]
+
+export const NavLinks = [
+
 ]

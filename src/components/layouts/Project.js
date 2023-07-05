@@ -46,7 +46,7 @@ const Project = ({ data }) => {
                 </PaddingContainer>
 
                 <ParaText top='1.5rem' bottom='2rem'>
-                    {data.projec_desc}
+                    {data.project_desc}
                 </ParaText>
 
                 <Button>
@@ -57,7 +57,10 @@ const Project = ({ data }) => {
 
             {/* --right-section-- */}
             <ProjectImageContainer justify='flex-end'>
-                <ProjectImage src={data.project_img} alt={data.project_name} />
+                <ProjectImage
+                    src={data.project_img}
+                    alt={data.project_name}
+                />
             </ProjectImageContainer>
         </FlexContainer>
     )
