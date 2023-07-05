@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion';
 
 // import global styles
 import {
@@ -15,10 +16,17 @@ import {
 
 import { AiOutlineClose } from 'react-icons/ai';
 import { navLinks } from '../../utils/Data';
+import { slideInLeft } from '../../utils/Variants';
 
 const NavMenu = ({ setOpenMenu }) => {
     return (
-        <NavMenuContainer>
+        <NavMenuContainer
+            as={motion.div}
+            variants={slideInLeft}
+            initial='hidden'
+            animate='visible'
+            exit='exit'
+        >
             {/* --close-button-- */}
             <PaddingContainer
                 left='5%'
@@ -27,6 +35,8 @@ const NavMenu = ({ setOpenMenu }) => {
             >
                 <FlexContainer justify='flex-end' responsiveFlex>
                     <MenuIcon
+                        as={motion.a}
+                        whileHover={{ scale: 1.2 }}
                         onClick={() => setOpenMenu(false)}
                     >
                         <AiOutlineClose />
@@ -43,6 +53,8 @@ const NavMenu = ({ setOpenMenu }) => {
                 >
                     {navLinks.map((link) => (
                         <MenuItem
+                            as={motion.a}
+                            whileHover={{ scale: 1.2 }}
                             key={link.id}
                             href={`#${link.href}`}
                             onClick={() => setOpenMenu(false)}

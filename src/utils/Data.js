@@ -45,7 +45,7 @@ export const projectDetails = [
         tech_stack: ['Javascript', "Bootstrap", "HTML"],
         project_img: Project2,
         project_url: 'https://www.google.com',
-        reverse: false,
+        reverse: true,
     },
 ]
 

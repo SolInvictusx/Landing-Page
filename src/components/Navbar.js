@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion';
 
 // import global styles
 import {
@@ -50,14 +51,20 @@ const Navbar = () => {
 
                         {/* --right-menu-icon-- */}
                         <MenuIcon
+                            as={motion.a}
+                            whileHover={{ scale: 1.2 }}
                             onClick={() => { setOpenMenu(true) }}
                         >
                             <GiHamburgerMenu />
                         </MenuIcon>
+
                     </FlexContainer>
                 </Container>
+                <AnimatePresence>
+                    {openMenu && <NavMenu setOpenMenu={setOpenMenu} />}
+                </AnimatePresence>
 
-                {openMenu && <NavMenu setOpenMenu={setOpenMenu} />}
+
             </PaddingContainer>
         </NavbarContainer>
     )

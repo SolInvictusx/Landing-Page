@@ -26,7 +26,7 @@ import { GrMail } from 'react-icons/gr';
 import ShowcaseImg from '../assets/showcase-img.png'
 import BackgroundImg from '../assets/particle.png';
 
-import { fadeInLeftVariant } from '../utils/Variants';
+import { fadeInLeftVariant, fadeInRightVariant } from '../utils/Variants';
 
 const Showcase = () => {
     return (
@@ -34,7 +34,7 @@ const Showcase = () => {
             id='Home'
             left='3%'
             right='10%'
-            top='15%'
+            top='18%'
             bottom='10%'
             responsiveLeft='1rem'
             responsiveRight='1rem'
@@ -84,13 +84,29 @@ const Showcase = () => {
                 </motion.div>
 
                 {/* --right-content-- */}
-                <FlexContainer justify='flex-end'>
+                <FlexContainer
+                    as={motion.div}
+                    variants={fadeInRightVariant}
+                    initial='hidden'
+                    whileInView='visible'
+                    justify='flex-end'
+                >
                     <ShowcaseParticleContainer>
                         <ShowcaseImageCard>
                             <img src={ShowcaseImg} alt='showcase' />
                         </ShowcaseImageCard>
 
                         <Particle
+                            as={motion.img}
+                            animate={{
+                                x: [0, 100, 0],
+                                rotate: 360,
+                                scale: [1, 0.5, 1]
+                            }}
+                            transition={{
+                                duration: 20,
+                                repeat: Infinity,
+                            }}
                             src={BackgroundImg}
                             alt='particle'
                             top='-80px'
@@ -99,6 +115,16 @@ const Showcase = () => {
                         />
 
                         <Particle
+                            as={motion.img}
+                            animate={{
+                                y: [0, 100, 0],
+                                rotate: 360,
+                                scale: [1, 0.8, 1]
+                            }}
+                            transition={{
+                                duration: 18,
+                                repeat: Infinity,
+                            }}
                             src={BackgroundImg}
                             alt='particle'
                             top='50px'
@@ -107,6 +133,16 @@ const Showcase = () => {
                         />
 
                         <Particle
+                            as={motion.img}
+                            animate={{
+                                x: [0, -100, 0],
+                                rotate: 360,
+                                scale: [1, 0.9, 1]
+                            }}
+                            transition={{
+                                duration: 15,
+                                repeat: Infinity,
+                            }}
                             src={BackgroundImg}
                             alt='particle'
                             bottom='10px'

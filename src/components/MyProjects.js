@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion';
 
 // import global styles
 import {
@@ -10,6 +11,8 @@ import {
 import { projectDetails } from '../utils/Data';
 import Project from './layouts/Project';
 
+import { fadeinTopVariant } from '../utils/Variants';
+
 const MyProjects = () => {
     return (
         <PaddingContainer
@@ -20,11 +23,22 @@ const MyProjects = () => {
             responsiveLeft='1rem'
             responsiveRight='1rem'
         >
-            <Heading as='h4' size='h4'>
+            <Heading
+                as={motion.h4}
+                variants={fadeinTopVariant}
+                initial='hidden'
+                whileInView='visible'
+                size='h4'>
                 MY PROJECTS
             </Heading>
 
-            <Heading as='h2' size='h2'>
+            <Heading
+                as={motion.h2}
+                variants={fadeinTopVariant}
+                initial='hidden'
+                whileInView='visible'
+                size='h2'
+            >
                 What <BlueText>I have built</BlueText>
             </Heading>
 
