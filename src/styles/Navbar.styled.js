@@ -31,7 +31,7 @@ top: 0;
 left: 0;
 height: 100vh;
 width: 100%;
-background-color: ${({ theme }) => theme.colors.primary_light}
+background-color: ${({ theme }) => theme.colors.primary_light};
 z-index: 1;
 `
 
