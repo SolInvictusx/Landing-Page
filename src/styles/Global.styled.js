@@ -130,16 +130,3 @@ transition: all 0.3s ease;
     background-color: ${({ theme }) => theme.colors.white};
 }
 `
-
-export const FadeImage = styled.img`
-position: absolute,
-top: ${({ top }) => top};
-right: ${({ right }) => right};
-left: ${({ left }) => left};
-bottom: ${({ bottom }) => bottom};
-z-index: 0;
-
-@media ${({ theme }) => theme.breakpoints.mobile}{
-    display: none;
-}
-`
