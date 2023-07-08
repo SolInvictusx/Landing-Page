@@ -25,7 +25,7 @@ const MySkills = () => {
     return (
         <PaddingContainer
             id='Skills'
-            top='10'
+            top='10%'
             bottom='10%'
             responsiveLeft='1rem'
             responsiveRight='1rem'
@@ -70,7 +70,7 @@ const MySkills = () => {
                     </Heading>
 
                     <ParaText top='2rem' bottom='1.5rem'>
-                        As a Developer, I have a wide range of experience in full stack development. I am proficient in React, Javascript, Node, MongoDB, Formik, JQuery and other technologies. My experience in building responsive and dynanimc web applications has allowed me to create engaging user interfaces and compelling projects.
+                        As a Developer, I have a wide range of experience in full stack development. I am proficient in React, Javascript, Node, MongoDB, JQuery and other technologies. My experience in building responsive and dynanimc web applications has allowed me to create engaging user interfaces and compelling projects.
                     </ParaText>
                     <ParaText>
                         I have experience in using React for building scalable and maintainable applications. This has allowed me to create efficient and sustainable code that can adapt to the changing needs of a business.

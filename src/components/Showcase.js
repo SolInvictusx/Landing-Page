@@ -23,7 +23,7 @@ import { BsLinkedin, BsGithub } from 'react-icons/bs';
 import { GrMail } from 'react-icons/gr';
 
 // import asset
-import ShowcaseImg from '../assets/showcase-img.png'
+import ShowcaseImg from '../assets/showcase-img.png';
 import BackgroundImg from '../assets/particle.png';
 
 import { fadeInLeftVariant, fadeInRightVariant } from '../utils/Variants';
@@ -59,11 +59,11 @@ const Showcase = () => {
                     </Heading>
 
                     <Heading as='h3' size='h3'>
-                        I'm a <BlueText>Full Stack Developer</BlueText>
+                        I'm a <BlueText>Front End Developer</BlueText>
                     </Heading>
 
                     <ParaText as='p' top='2rem' bottom='4rem'>
-                        Hello, my name is Ryan Mebruer and I'm a Full-Stack developer based out of New Jersey. I have experience building user-friendly websites and web applications.
+                        Hello, my name is Ryan Mebruer and I'm a Front End developer based out of New Jersey. I have experience building user-friendly websites and web applications.
                     </ParaText>
 
                     {/* social-icons */}
