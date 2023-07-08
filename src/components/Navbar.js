@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // import global styles
@@ -13,7 +13,7 @@ import {
 import {
     NavbarContainer,
     Logo,
-    MenuIcon,
+    MenuIcon
 } from '../styles/Navbar.styled';
 
 import { GiHamburgerMenu } from 'react-icons/gi';
@@ -30,13 +30,16 @@ const Navbar = () => {
             window.scrollY > 50 ? setSticky(true) : setSticky(false);
         }
         window.addEventListener('scroll', onScroll);
-        return () => window.removeEventListener('scroll', onScroll);
+
+        // cleanup
+        return () => window.removeEventListener
+            ('scroll', onScroll);
     }, [])
 
     return (
         <NavbarContainer bgColor={sticky ? theme.colors.primary : 'transparent'}>
             <PaddingContainer
-                top="1.2rem"
+                top='1.2rem'
                 bottom='1.2rem'
                 responsiveLeft='1rem'
                 responsiveRight='1rem'

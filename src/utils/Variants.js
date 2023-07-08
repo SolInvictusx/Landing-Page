@@ -38,6 +38,7 @@ export const fadeinTopVariant = {
     visible: {
         y: 0,
         opacity: 1,
+
         transition: {
             type: 'tween',
             duration: 1,
@@ -53,6 +54,7 @@ export const fadeInBottomVariant = {
     visible: {
         y: 0,
         opacity: 1,
+
         transition: {
             type: 'tween',
             duration: 1,

@@ -135,7 +135,7 @@ const Showcase = () => {
                         <Particle
                             as={motion.img}
                             animate={{
-                                x: [0, -100, 0],
+                                y: [0, -100, 0],
                                 rotate: 360,
                                 scale: [1, 0.9, 1]
                             }}

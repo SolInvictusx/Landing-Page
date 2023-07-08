@@ -85,7 +85,7 @@ font-size: ${({ size }) => {
                 return;
         }
     }}
-    }
+}
 `
 
 export const BlueText = styled.span`
@@ -132,14 +132,14 @@ transition: all 0.3s ease;
 `
 
 export const FadeImage = styled.img`
-position: absolute;
+position: absolute,
 top: ${({ top }) => top};
 right: ${({ right }) => right};
 left: ${({ left }) => left};
 bottom: ${({ bottom }) => bottom};
 z-index: 0;
 
-@media(max-width: ${({ theme }) => theme.breakpoints.mobile}){
+@media ${({ theme }) => theme.breakpoints.mobile}{
     display: none;
 }
 `
