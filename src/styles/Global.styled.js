@@ -141,6 +141,7 @@ border: 1px solid ${({ theme }) => theme.colors.gray};
 border-radius: 5px;
 cursor: pointer;
 transition: all 0.3s ease;
+text-decoration: none;
 
 &:hover{
     color: ${({ theme }) => theme.colors.primary_light};

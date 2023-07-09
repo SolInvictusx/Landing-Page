@@ -40,9 +40,12 @@ const Project = ({ data }) => {
                         {data.project_name}
                     </Heading>
 
-                    <IconContainer color='blue' size='2rem'>
-                        <FaGithub />
-                    </IconContainer>
+                    <a href={data.project_git} target="_blank" rel="noopener noreferrer">
+                        <IconContainer color='blue' size='2rem'>
+                            <FaGithub />
+                        </IconContainer>
+                    </a>
+
                 </FlexContainer>
 
                 <PaddingContainer top='1rem'>
@@ -57,9 +60,10 @@ const Project = ({ data }) => {
                     {data.project_desc}
                 </ParaText>
 
-                <Button>
+                <Button href={data.project_url} target="_blank" rel="noopener noreferrer">
                     Visit Website
                 </Button>
+
 
             </motion.div>
 
