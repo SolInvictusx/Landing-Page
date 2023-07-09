@@ -9,6 +9,7 @@ import {
     IconContainer,
     ParaText,
     BlueText,
+    SkillsIconContainer,
 } from '../styles/Global.styled';
 
 // import My Skills styles
@@ -45,14 +46,15 @@ const MySkills = () => {
                 >
                     {Skills.map((skill) => (
                         <SkillsCard>
-                            <IconContainer size='5rem' color='blue'>
+                            <SkillsIconContainer size='5rem' color='blue'>
                                 {skill.icon}
-                            </IconContainer>
+                            </SkillsIconContainer>
                             <Heading as='h4' size='h4'>
                                 {skill.tech}
                             </Heading>
                         </SkillsCard>
                     ))}
+
                 </SkillsCardContainer>
 
                 {/* --right-section-- */}

@@ -33,9 +33,9 @@ export const projectDetails = [
         id: 0,
         project_name: "Campground Travel Guide",
         project_desc: "A travel applicaton that allows the user to inspect campsites, look at reviews, and book spots!",
-        tech_stack: ['React JS', "Bootstrap", "Redux JS"],
+        tech_stack: ['React JS', "Bootstrap", "Node JS"],
         project_img: Project1,
-        project_url: 'https://www.google.com',
+        project_url: 'https://campingexplorer.netlify.app/',
         reverse: false,
     },
     {

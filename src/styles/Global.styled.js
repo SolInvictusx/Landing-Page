@@ -44,6 +44,23 @@ flex-direction: ${({ direction }) => direction};
 }
 `
 
+export const SkillsIconContainer = styled.div`
+  font-size: ${({ size }) => size};
+  color: ${({ color, theme }) => {
+        switch (color) {
+            case 'white':
+                return theme.colors.white;
+
+            case 'blue':
+                return theme.colors.secondary;
+
+            default:
+                return;
+        }
+    }};
+`
+
+
 export const Heading = styled(PaddingContainer)`
 color: ${({ theme }) => theme.colors.white};
 text-align: ${({ align }) => align};

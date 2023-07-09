@@ -69,15 +69,15 @@ const Showcase = () => {
                     {/* social-icons */}
                     <FlexContainer gap='20px' responsiveFlex>
                         <IconContainer color='white' size='1.5rem'>
-                            <BsLinkedin />
+                            <BsLinkedin onClick={event => window.open('https://www.linkedin.com/in/ryan-mebruer-688607164/', '_blank')} />
                         </IconContainer>
 
                         <IconContainer color='white' size='1.5rem'>
-                            <BsGithub />
+                            <BsGithub onClick={event => window.open('https://github.com/SolInvictusx', '_blank')} />
                         </IconContainer>
 
                         <IconContainer color='white' size='1.5rem'>
-                            <GrMail />
+                            <GrMail onClick={event => window.open('mailto:ryanmebruer@gmail.com', '_blank')} />
                         </IconContainer>
 
                     </FlexContainer>
