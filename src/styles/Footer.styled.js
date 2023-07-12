@@ -9,7 +9,7 @@ width: 40%;
 }
 `
 
-export const FormLabel = styled.p`
+export const FormLabel = styled.label`
 color: ${({ theme }) => theme.colors.para_text_color};
 padding-bottom: 10px;
 `

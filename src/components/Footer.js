@@ -1,5 +1,9 @@
-import React from 'react'
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
+
+// Import your CSS file
+import '../styles/ContactForm.css';
 
 // import global styles
 import {
@@ -7,19 +11,25 @@ import {
     Heading,
     BlueText,
     FlexContainer,
-    Button,
 } from '../styles/Global.styled';
-
-// import footer styles
-import {
-    ContactForm,
-    FormLabel,
-    FormInput,
-} from '../styles/Footer.styled';
 
 import { fadeInBottomVariant } from '../utils/Variants';
 
 const Footer = () => {
+
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_58yhfde', 'template_z33p5c8', form.current, 'PNTEgjs3kAbtluPDe')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+    };
+
     return (
         <PaddingContainer
             id='Contact'
@@ -52,47 +62,28 @@ const Footer = () => {
             <PaddingContainer top='3rem'>
                 <FlexContainer justify='center'>
 
-                    <ContactForm
-                        as={motion.form}
+                    <motion.form
+                        ref={form}
+                        className="contactForm"
+                        onSubmit={sendEmail}
                         variants={fadeInBottomVariant}
                         initial='hidden'
-                        whileInView='visible'
+                        animate='visible'
                     >
+                        <label className="contactFormLabel">Name</label>
+                        <input type="text" name="user_name" className="contactFormInput" />
+                        <label className="contactFormLabel">Email</label>
+                        <input type="email" name="user_email" className="contactFormInput" />
+                        <label className="contactFormLabel">Message</label>
+                        <textarea name="message" className="contactFormInput" />
+                        <input type="submit" value="Send Message" className="contactFormButton" />
 
-                        <PaddingContainer bottom='2rem'>
-                            <FormLabel>Name:</FormLabel>
-                            <FormInput
-                                type='text'
-                                placeholder='Enter your name'
-                            />
-                        </PaddingContainer>
-
-                        <PaddingContainer bottom='2rem'>
-                            <FormLabel>Email:</FormLabel>
-                            <FormInput
-                                type='email'
-                                placeholder='Enter your email'
-                            />
-                        </PaddingContainer>
-
-                        <PaddingContainer bottom='2rem'>
-                            <FormLabel>Message:</FormLabel>
-                            <FormInput
-                                as='textarea'
-                                placeholder='Enter your message'
-                            />
-                        </PaddingContainer>
-
-                        <FlexContainer justify='center'
-                            responsiveFlex>
-                            <Button>Send Message</Button>
-                        </FlexContainer>
-                    </ContactForm>
+                    </motion.form>
 
                 </FlexContainer>
-            </PaddingContainer >
-        </PaddingContainer >
+            </PaddingContainer>
+        </PaddingContainer>
     )
 }
 
-export default Footer
+export default Footer;

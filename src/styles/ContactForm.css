@@ -1,0 +1,48 @@
+.contactForm {
+    width: 40%;
+}
+
+.contactFormLabel {
+    color: #dcdcdc;
+    padding-bottom: 10px;
+}
+
+.contactFormInput {
+    width: 100%;
+    background-color: #131c31;
+    border: 1px solid #dcdcdc;
+    color: #dcdcdc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.contactFormButton {
+    width: 40%;
+    color: #dcdcdc;
+    background-color: #131c31;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: auto;
+    display: block;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.contactFormButton:hover {
+    background-color: #dcdcdc;
+    color: #131c31;
+}
+
+
+.contactFormInput::placeholder {
+    color: #dcdcdc;
+}
+
+@media (max-width: 720px) {
+    .contactForm {
+        width: 90%;
+        margin: auto;
+    }
+}
