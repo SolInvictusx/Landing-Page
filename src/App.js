@@ -2,6 +2,8 @@ import React from 'react'
 import { ThemeProvider } from 'styled-components';
 import { theme } from './utils/Theme';
 import { MainBody, Container } from './styles/Global.styled';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 // import components
 import Showcase from './components/Showcase';
