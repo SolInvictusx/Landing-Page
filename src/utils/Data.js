@@ -45,8 +45,8 @@ export const projectDetails = [
         project_desc: "This e-commerce site allows the user to get to know more about a local farm, check out different proportions of products, and add those products to a cart for check out!",
         tech_stack: ['Javascript', "CSS", "HTML"],
         project_img: Project2,
-        project_git: 'https://github.com/SolInvictusx/Personal-Portfolio',
-        project_url: 'https://github.com/SolInvictusx/Personal-Portfolio',
+        project_git: 'https://github.com/SolInvictusx/Lost-Loop',
+        project_url: 'https://lostloopfarms.com',
         reverse: true,
     },
 ]
