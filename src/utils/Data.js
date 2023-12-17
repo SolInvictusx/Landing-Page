@@ -30,6 +30,16 @@ export const Skills = [
 
 export const projectDetails = [
     {
+        id: 1,
+        project_name: "Local Meat Distributor",
+        project_desc: "This e-commerce site allows the user to get to know more about a local farm, check out different proportions of products, and contact the owner for more info about these products!",
+        tech_stack: ['React JS', "CSS", "HTML"],
+        project_img: Project2,
+        project_git: 'https://github.com/SolInvictusx/Lost-Loop',
+        project_url: 'https://lostloopfarms.com',
+        reverse: true,
+    },
+    {
         id: 0,
         project_name: "Campground Travel Guide",
         project_desc: "A travel applicaton that allows the user to inspect campsites, look at reviews, and book spots!",
@@ -38,16 +48,6 @@ export const projectDetails = [
         project_git: 'https://github.com/SolInvictusx/Project-2',
         project_url: 'https://campingexplorer.netlify.app/',
         reverse: false,
-    },
-    {
-        id: 1,
-        project_name: "Local Meat Distributor",
-        project_desc: "This e-commerce site allows the user to get to know more about a local farm, check out different proportions of products, and contact the owner for more info about these products!",
-        tech_stack: ['Javascript', "CSS", "HTML"],
-        project_img: Project2,
-        project_git: 'https://github.com/SolInvictusx/Lost-Loop',
-        project_url: 'https://lostloopfarms.com',
-        reverse: true,
     },
 ]
 
