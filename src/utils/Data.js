@@ -42,7 +42,7 @@ export const projectDetails = [
     {
         id: 1,
         project_name: "Local Meat Distributor",
-        project_desc: "This e-commerce site allows the user to get to know more about a local farm, check out different proportions of products, and add those products to a cart for check out!",
+        project_desc: "This e-commerce site allows the user to get to know more about a local farm, check out different proportions of products, and contact the owner for more info about these products!",
         tech_stack: ['Javascript', "CSS", "HTML"],
         project_img: Project2,
         project_git: 'https://github.com/SolInvictusx/Lost-Loop',
